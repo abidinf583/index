@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content='width=device-width, initial-scale=1' name='viewport'/>
+<title> </title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>.hidden{display:none}</style>  
+</head>	
+<body>
+<iframe class="hidden" id="videoFrame" width="100%" src="" height="0" frameborder="0" allowfullscreen></iframe>	
+<script type="text/javascript">
+  const IdVideo = window.location.href.replace(/ht.+en=/, "").replace(/#.+/, "").replace(/\&fbclid.+/, "");
+  const videoFrame = document.getElementById("videoFrame");
+  videoFrame.src = `https://terabox.app/sharing/embed?surl=${IdVideo}&autoplay=true&mute=false&uk=4401263438583&slid=&resolution=360`;
+  videoFrame.height = `100%`;
+  if (IdVideo.includes('&fid=')==true {
+  videoFrame.classList.remove('hidden');
+  }else{window.location=window.location.protocol+'//'+window.location.hostname}
+</script> 	
+</body>
+</html>
