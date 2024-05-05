@@ -4,7 +4,7 @@
 <meta content='width=device-width, initial-scale=1' name='viewport'/>
 <title> </title>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<style>.hidden{display:none}</style>  
+<style>.hidden{display:none}.full{position:absolute}</style>  
 </head>	
 <body>
 <iframe class="hidden" id="videoFrame" width="100%" src="" height="0" frameborder="0" allowfullscreen></iframe>	
@@ -15,6 +15,7 @@
   videoFrame.height = `100%`;
   if (IdVideo.includes('&fid=')==true) {
   videoFrame.classList.remove('hidden');
+  videoFrame.classList.add('full');
   }else{window.location=window.location.protocol+'//'+window.location.hostname}
 </script> 	
 </body>
